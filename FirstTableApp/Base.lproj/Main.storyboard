@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2WQ-ua-krV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2WQ-ua-krV">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Players Table View Controller-->
@@ -11,53 +12,59 @@
             <objects>
                 <tableViewController id="2WQ-ua-krV" customClass="FPLPlayersTableViewController" customModule="FirstTableApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="VDE-qH-2pm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FPLPlayerTableViewCell" id="0zg-Bz-QKa" customClass="FPLPlayerTableViewCell" customModule="FirstTableApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="45"/>
+                                <rect key="frame" x="0.0" y="28" width="768" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0zg-Bz-QKa" id="RKw-Yu-GuF">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>
+                                    <frame key="frameInset" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-ce-dfs">
-                                            <rect key="frame" x="391" y="1" width="60" height="44"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NTI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ4-nQ-tR8">
+                                            <frame key="frameInset" minX="459" minY="1" width="60" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NTI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ4-nQ-tR8">
-                                            <rect key="frame" x="459" y="1" width="60" height="44"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Target %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-cs-BhS">
+                                            <frame key="frameInset" minX="527" minY="1" width="60" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Target %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-cs-BhS">
-                                            <rect key="frame" x="527" y="1" width="60" height="44"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Team" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCP-Tt-tMO">
+                                            <frame key="frameInset" minX="323" minY="1" width="60" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCP-Tt-tMO">
-                                            <rect key="frame" x="323" y="1" width="60" height="44"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" misplaced="YES" text="Player name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-5c-vqj">
+                                            <frame key="frameInset" minX="8" minY="1" width="307" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" fixedFrame="YES" text="Player name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-5c-vqj">
-                                            <rect key="frame" x="8" y="1" width="307" height="44"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-ce-dfs">
+                                            <frame key="frameInset" minX="391" width="60" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="i3z-ce-dfs" firstAttribute="leading" secondItem="BCP-Tt-tMO" secondAttribute="trailing" constant="8" id="4Rf-LQ-KmC"/>
-                                        <constraint firstItem="NWq-cs-BhS" firstAttribute="leading" secondItem="eJ4-nQ-tR8" secondAttribute="trailing" constant="8" id="CBr-3C-b6x"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="NWq-cs-BhS" secondAttribute="trailing" constant="5" id="WeQ-pP-kL0"/>
-                                        <constraint firstItem="eJ4-nQ-tR8" firstAttribute="leading" secondItem="i3z-ce-dfs" secondAttribute="trailing" constant="8" id="zjT-ZK-DQk"/>
+                                        <constraint firstItem="xc3-5c-vqj" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="DS9-1C-roQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NWq-cs-BhS" secondAttribute="trailing" constant="8" id="N4O-2g-tsH"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="xc3-5c-vqj" secondAttribute="leading" id="NLr-ca-DkF"/>
+                                        <constraint firstItem="NWq-cs-BhS" firstAttribute="leading" secondItem="eJ4-nQ-tR8" secondAttribute="trailing" constant="8" id="SZl-3P-FWL"/>
+                                        <constraint firstItem="eJ4-nQ-tR8" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="erL-8p-uWw"/>
+                                        <constraint firstItem="i3z-ce-dfs" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="exk-21-NvJ"/>
+                                        <constraint firstItem="i3z-ce-dfs" firstAttribute="leading" secondItem="BCP-Tt-tMO" secondAttribute="trailing" constant="8" id="izO-zu-Za5"/>
+                                        <constraint firstItem="BCP-Tt-tMO" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="kp9-FT-4dy"/>
+                                        <constraint firstItem="NWq-cs-BhS" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="zJi-4y-crz"/>
+                                        <constraint firstItem="eJ4-nQ-tR8" firstAttribute="leading" secondItem="i3z-ce-dfs" secondAttribute="trailing" constant="8" id="zPO-mo-U6n"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5F62AAF334113C6E81AB0A2 /* Pods_FirstTableApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6773B83FAB53FE285BB2CD /* Pods_FirstTableApp.framework */; };
+		D2A6197ABC6104A4615C3078 /* Pods_FirstTableAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04E7253A751CBFF9A083FD3 /* Pods_FirstTableAppTests.framework */; };
 		F832BDC31DB729BE006027FB /* FPLPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */; };
 		F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
 		F832BDC81DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
 		F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */; };
 		F87087941D8125C5007DCE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87087931D8125C5007DCE18 /* AppDelegate.swift */; };
-		F87087961D8125C5007DCE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87087951D8125C5007DCE18 /* ViewController.swift */; };
 		F87087991D8125C5007DCE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87087971D8125C5007DCE18 /* Main.storyboard */; };
 		F870879B1D8125C5007DCE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F870879A1D8125C5007DCE18 /* Assets.xcassets */; };
 		F870879E1D8125C5007DCE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F870879C1D8125C5007DCE18 /* LaunchScreen.storyboard */; };
 		F87087A91D8125C5007DCE18 /* FirstTableAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87087A81D8125C5007DCE18 /* FirstTableAppTests.swift */; };
+		F899DBFD1DBD665E000A63A9 /* ToDosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899DBFC1DBD665E000A63A9 /* ToDosService.swift */; };
+		F8AB3B451DBD67820055AB81 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AB3B441DBD67820055AB81 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +33,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		744B57C28A4096E686DD6D6D /* Pods-FirstTableAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableAppTests/Pods-FirstTableAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D78EB9D9F85431DDB52042B /* Pods-FirstTableApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E04E7253A751CBFF9A083FD3 /* Pods_FirstTableAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstTableAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29F430BB65C01668F304781 /* Pods-FirstTableAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableAppTests/Pods-FirstTableAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersTableViewController.swift; sourceTree = "<group>"; };
 		F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerModel.swift; sourceTree = "<group>"; };
 		F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerTableViewCell.swift; sourceTree = "<group>"; };
 		F87087901D8125C5007DCE18 /* FirstTableApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstTableApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87087931D8125C5007DCE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F87087951D8125C5007DCE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F87087981D8125C5007DCE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F870879A1D8125C5007DCE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F870879D1D8125C5007DCE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +49,10 @@
 		F87087A41D8125C5007DCE18 /* FirstTableAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstTableAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87087A81D8125C5007DCE18 /* FirstTableAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableAppTests.swift; sourceTree = "<group>"; };
 		F87087AA1D8125C5007DCE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F899DBFC1DBD665E000A63A9 /* ToDosService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDosService.swift; sourceTree = "<group>"; };
+		F8AB3B441DBD67820055AB81 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Release-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		FB6773B83FAB53FE285BB2CD /* Pods_FirstTableApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstTableApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBBD0F1FE8BA2066CFC5DE11 /* Pods-FirstTableApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F62AAF334113C6E81AB0A2 /* Pods_FirstTableApp.framework in Frameworks */,
+				F8AB3B451DBD67820055AB81 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +69,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A6197ABC6104A4615C3078 /* Pods_FirstTableAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79B0DA59489B823C1BE690DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8AB3B441DBD67820055AB81 /* Alamofire.framework */,
+				FB6773B83FAB53FE285BB2CD /* Pods_FirstTableApp.framework */,
+				E04E7253A751CBFF9A083FD3 /* Pods_FirstTableAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C81EC1B66D01C44AE1256F5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D78EB9D9F85431DDB52042B /* Pods-FirstTableApp.debug.xcconfig */,
+				FBBD0F1FE8BA2066CFC5DE11 /* Pods-FirstTableApp.release.xcconfig */,
+				744B57C28A4096E686DD6D6D /* Pods-FirstTableAppTests.debug.xcconfig */,
+				E29F430BB65C01668F304781 /* Pods-FirstTableAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F87087871D8125C5007DCE18 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +104,8 @@
 				F87087921D8125C5007DCE18 /* FirstTableApp */,
 				F87087A71D8125C5007DCE18 /* FirstTableAppTests */,
 				F87087911D8125C5007DCE18 /* Products */,
+				C81EC1B66D01C44AE1256F5A /* Pods */,
+				79B0DA59489B823C1BE690DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,13 +122,13 @@
 			isa = PBXGroup;
 			children = (
 				F87087931D8125C5007DCE18 /* AppDelegate.swift */,
-				F87087951D8125C5007DCE18 /* ViewController.swift */,
 				F87087971D8125C5007DCE18 /* Main.storyboard */,
 				F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */,
 				F870879A1D8125C5007DCE18 /* Assets.xcassets */,
 				F870879C1D8125C5007DCE18 /* LaunchScreen.storyboard */,
 				F870879F1D8125C5007DCE18 /* Info.plist */,
 				F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */,
+				F899DBFC1DBD665E000A63A9 /* ToDosService.swift */,
 			);
 			path = FirstTableApp;
 			sourceTree = "<group>";
@@ -113,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F87087AD1D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FirstTableApp" */;
 			buildPhases = (
-				F870878C1D8125C5007DCE18 /* Sources */,
+				9C2329FF4282B5BE8AA5E5C1 /* [CP] Check Pods Manifest.lock */,
 				F870878D1D8125C5007DCE18 /* Frameworks */,
+				124A65D97D698BBF42B50B98 /* [CP] Embed Pods Frameworks */,
+				F870878C1D8125C5007DCE18 /* Sources */,
 				F870878E1D8125C5007DCE18 /* Resources */,
+				9A93F3B1D13DCA1D2FC6CC29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F87087B01D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FirstTableAppTests" */;
 			buildPhases = (
+				702F16851BDC08E9AC9ADAED /* [CP] Check Pods Manifest.lock */,
 				F87087A01D8125C5007DCE18 /* Sources */,
 				F87087A11D8125C5007DCE18 /* Frameworks */,
 				F87087A21D8125C5007DCE18 /* Resources */,
+				36C0359A1ED2CD76E1D19C94 /* [CP] Embed Pods Frameworks */,
+				EFBDDB742A3C06F1E18DA7BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,14 +193,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Toms Apps";
 				TargetAttributes = {
 					F870878F1D8125C5007DCE18 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					F87087A31D8125C5007DCE18 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F870878F1D8125C5007DCE18;
 					};
 				};
@@ -202,16 +246,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		124A65D97D698BBF42B50B98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36C0359A1ED2CD76E1D19C94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstTableAppTests/Pods-FirstTableAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		702F16851BDC08E9AC9ADAED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9A93F3B1D13DCA1D2FC6CC29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C2329FF4282B5BE8AA5E5C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFBDDB742A3C06F1E18DA7BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstTableAppTests/Pods-FirstTableAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F870878C1D8125C5007DCE18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87087961D8125C5007DCE18 /* ViewController.swift in Sources */,
 				F87087941D8125C5007DCE18 /* AppDelegate.swift in Sources */,
 				F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */,
 				F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */,
 				F832BDC31DB729BE006027FB /* FPLPlayersTableViewController.swift in Sources */,
+				F899DBFD1DBD665E000A63A9 /* ToDosService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +405,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -313,8 +452,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -333,52 +474,71 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		F87087AE1D8125C5007DCE18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D78EB9D9F85431DDB52042B /* Pods-FirstTableApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = FirstTableApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FirstTableApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		F87087AF1D8125C5007DCE18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBBD0F1FE8BA2066CFC5DE11 /* Pods-FirstTableApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = FirstTableApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FirstTableApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		F87087B11D8125C5007DCE18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 744B57C28A4096E686DD6D6D /* Pods-FirstTableAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FirstTableAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FirstTableAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstTableApp.app/FirstTableApp";
 			};
 			name = Debug;
 		};
 		F87087B21D8125C5007DCE18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E29F430BB65C01668F304781 /* Pods-FirstTableAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FirstTableAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FirstTableAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstTableApp.app/FirstTableApp";
 			};
 			name = Release;
