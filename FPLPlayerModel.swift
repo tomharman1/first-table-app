@@ -15,10 +15,10 @@ class FPLPlayerModel {
     var team: String
     var price: Double
     var netTransfersIn: Int32
-    var targetPercentage: Int
+    var targetPercentage: Double
     
     // MARK: Initialization
-    init?(name: String, team: String, price: Double, netTransfersIn: Int32, targetPercentage: Int) {
+    init?(name: String, team: String, price: Double, netTransfersIn: Int32, targetPercentage: Double) {
         self.name = name
         self.team = team
         self.price = price

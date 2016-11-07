@@ -12,23 +12,23 @@ class FPLPlayersTableViewController: UITableViewController {
 
     // MARK: Properties
     
+    let fplPlayersModel = FPLPlayersModel()
     var players = [FPLPlayerModel]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadSamplePlayers()
+        
+        // loadSamplePlayers()
         // ToDosService()
+        loadPlayersFromService()
     }
     
-    fileprivate func loadSamplePlayers() {
-        let player1 = FPLPlayerModel(name: "Theo Walcott", team: "Arsenal", price: 8.7, netTransfersIn: 800000, targetPercentage: -78)!
-        let player2 = FPLPlayerModel(name: "Alexis Sanchez", team: "Arsenal", price: 11.2, netTransfersIn: 25000, targetPercentage: 255)!
-        let player3 = FPLPlayerModel(name: "Deli Ali", team: "Spurs", price: 7.8, netTransfersIn: 350000, targetPercentage: 101)!
-        let player4 = FPLPlayerModel(name: "Daily Blind", team: "Man U", price: 5.5, netTransfersIn: -50000, targetPercentage: -50)!
-        let player5 = FPLPlayerModel(name: "Romeleu Lukaku", team: "Everton", price: 10.2, netTransfersIn: 20000, targetPercentage: 24)!
-        
-        players += [player1, player2, player3, player4, player5]
+    private func loadPlayersFromService() {
+        _ = self.fplPlayersModel.refresh(complete: {
+            self.players = self.fplPlayersModel.players
+            self.tableView.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,16 +51,40 @@ class FPLPlayersTableViewController: UITableViewController {
         let cellIdentifier = "FPLPlayerTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FPLPlayerTableViewCell
         
-        let player = players[(indexPath as NSIndexPath).row]
-
-        cell.playerNameLabel.text = player.name
-        cell.teamNameLabel.text = player.team
-        cell.priceLabel.text = String(format:"%.2f", player.price)
-        cell.netTransfersInLabel.text = String(player.netTransfersIn)
-        cell.targetPercentageLabel.text = String(player.targetPercentage)
-
+        if (indexPath.row == 0) {
+            cell.playerNameLabel.text = "name"
+            cell.teamNameLabel.text = "team"
+            cell.priceLabel.text = "price"
+            cell.netTransfersInLabel.text = "NTI"
+            cell.targetPercentageLabel.text = "%"
+        }
+        else {
+            let player = players[(indexPath as NSIndexPath).row]
+            
+            cell.playerNameLabel.text = player.name
+            cell.teamNameLabel.text = player.team
+            cell.priceLabel.text = String(format:"%.2f", player.price)
+            cell.netTransfersInLabel.text = String(player.netTransfersIn)
+            cell.targetPercentageLabel.text = String(player.targetPercentage)
+        }
         return cell
     }
+    
+    private func loadSamplePlayers() {
+        let player1 = FPLPlayerModel(name: "Theo Walcott", team: "Arsenal", price: 8.7, netTransfersIn: 800000, targetPercentage: -78)!
+        let player2 = FPLPlayerModel(name: "Alexis Sanchez", team: "Arsenal", price: 11.2, netTransfersIn: 25000, targetPercentage: 255)!
+        let player3 = FPLPlayerModel(name: "Deli Ali", team: "Spurs", price: 7.8, netTransfersIn: 350000, targetPercentage: 101)!
+        let player4 = FPLPlayerModel(name: "Daily Blind", team: "Man U", price: 5.5, netTransfersIn: -50000, targetPercentage: -50)!
+        let player5 = FPLPlayerModel(name: "Romeleu Lukaku", team: "Everton", price: 10.2, netTransfersIn: 20000, targetPercentage: 24)!
+        
+        players += [player1, player2, player3, player4, player5]
+    }
+    
+    /*
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
+     */
 
     /*
     // Override to support conditional editing of the table view.
