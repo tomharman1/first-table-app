@@ -19,8 +19,7 @@ class FPLPlayersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // loadSamplePlayers()
-        // ToDosService()
+//         loadSamplePlayers()
         loadPlayersFromService()
     }
     
@@ -48,17 +47,20 @@ class FPLPlayersTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "FPLPlayerTableViewCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FPLPlayerTableViewCell
+        let cellIdentifier = indexPath.row == 0 ? "FPLPlayerHeaderTableViewCell" : "FPLPlayerTableViewCell"
         
         if (indexPath.row == 0) {
-            cell.playerNameLabel.text = "name"
-            cell.teamNameLabel.text = "team"
-            cell.priceLabel.text = "price"
-            cell.netTransfersInLabel.text = "NTI"
-            cell.targetPercentageLabel.text = "%"
+            return self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! FPLPlayerHeaderTableViewCell
+            
+//            cell.playerNameLabel.text = "name"
+//            cell.teamNameLabel.text = "team"
+//            cell.priceLabel.text = "price"
+//            cell.netTransfersInLabel.text = "NTI"
+//            cell.targetPercentageLabel.text = "%"
         }
         else {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FPLPlayerTableViewCell
+            
             let player = players[(indexPath as NSIndexPath).row]
             
             cell.playerNameLabel.text = player.name
@@ -66,8 +68,9 @@ class FPLPlayersTableViewController: UITableViewController {
             cell.priceLabel.text = String(format:"%.2f", player.price)
             cell.netTransfersInLabel.text = String(player.netTransfersIn)
             cell.targetPercentageLabel.text = String(player.targetPercentage)
+            
+            return cell
         }
-        return cell
     }
     
     private func loadSamplePlayers() {

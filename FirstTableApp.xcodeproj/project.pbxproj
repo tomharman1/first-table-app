@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B5F62AAF334113C6E81AB0A2 /* Pods_FirstTableApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6773B83FAB53FE285BB2CD /* Pods_FirstTableApp.framework */; };
 		D2A6197ABC6104A4615C3078 /* Pods_FirstTableAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04E7253A751CBFF9A083FD3 /* Pods_FirstTableAppTests.framework */; };
+		F80004D61DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */; };
 		F832BDC31DB729BE006027FB /* FPLPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */; };
 		F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
 		F832BDC81DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
@@ -38,6 +39,7 @@
 		7D78EB9D9F85431DDB52042B /* Pods-FirstTableApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E04E7253A751CBFF9A083FD3 /* Pods_FirstTableAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstTableAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29F430BB65C01668F304781 /* Pods-FirstTableAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableAppTests/Pods-FirstTableAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersTableViewController.swift; sourceTree = "<group>"; };
 		F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerModel.swift; sourceTree = "<group>"; };
 		F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		F87087871D8125C5007DCE18 = {
 			isa = PBXGroup;
 			children = (
+				F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */,
 				F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */,
 				F87087921D8125C5007DCE18 /* FirstTableApp */,
 				F87087A71D8125C5007DCE18 /* FirstTableAppTests */,
@@ -196,7 +199,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Toms Apps";
 				TargetAttributes = {
 					F870878F1D8125C5007DCE18 = {
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F87087941D8125C5007DCE18 /* AppDelegate.swift in Sources */,
+				F80004D61DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift in Sources */,
 				F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */,
 				F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */,
 				F8CEA7FB1DCFE4A10091BCB4 /* FPLPlayersModel.swift in Sources */,
