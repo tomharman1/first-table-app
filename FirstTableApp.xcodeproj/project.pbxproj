@@ -204,10 +204,12 @@
 				TargetAttributes = {
 					F870878F1D8125C5007DCE18 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5YFM8BW7RJ;
 						LastSwiftMigration = 0800;
 					};
 					F87087A31D8125C5007DCE18 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5YFM8BW7RJ;
 						LastSwiftMigration = 0800;
 						TestTargetID = F870878F1D8125C5007DCE18;
 					};
@@ -422,6 +424,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5YFM8BW7RJ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -469,6 +472,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5YFM8BW7RJ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -499,7 +503,7 @@
 				);
 				INFOPLIST_FILE = FirstTableApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FirstTableApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomharman.me.fantasy-prem-price-changes-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -517,7 +521,7 @@
 				);
 				INFOPLIST_FILE = FirstTableApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FirstTableApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomharman.me.fantasy-prem-price-changes-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
