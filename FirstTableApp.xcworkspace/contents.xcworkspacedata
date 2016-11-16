@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FirstTableApp.xcodeproj">
+      location = "group:/Users/tharman/dev/git/first-table-app/FantasyPremierLeaguePlayerPriceChanges.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

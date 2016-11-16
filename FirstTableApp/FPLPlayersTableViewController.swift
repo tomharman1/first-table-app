@@ -10,8 +10,11 @@ import UIKit
 
 class FPLPlayersTableViewController: UITableViewController {
 
-    // MARK: Properties
+    // MARK: static strings
+    let RISING_TITLE_LABEL = "Rising"
+    let FALLING_TITLE_LABEL = "Falling"
     
+    // MARK: Properties
     let fplPlayersModel = FPLPlayersModel()
     var players = [FPLPlayerModel]()
     
@@ -19,8 +22,39 @@ class FPLPlayersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//         loadSamplePlayers()
-        loadPlayersFromService()
+        self.tableView.rowHeight = 35
+        
+         loadSamplePlayers()
+//        loadPlayersFromService()
+        
+        var items = [UIBarButtonItem]()
+        items.append(
+            UIBarButtonItem(title: RISING_TITLE_LABEL, style: .plain, target: self, action: #selector(onClickedSortButton(sender:)))
+        )
+        items.append(
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        )
+        items.append(
+            UIBarButtonItem(title: FALLING_TITLE_LABEL, style: .plain, target: self, action: #selector(onClickedSortButton(sender:)))
+        )
+        
+        self.setToolbarItems(items, animated: false)
+        self.navigationController?.setToolbarHidden(false, animated: true)
+//        self.setToolbarHidden(false, animated: true)
+    }
+    
+    func onClickedSortButton(sender: UIBarButtonItem) {
+        switch sender.title! {
+            case self.RISING_TITLE_LABEL :
+//                print("got descending press")
+                players.sort() { $0.targetPercentage > $1.targetPercentage }
+            case self.FALLING_TITLE_LABEL :
+//                print("got ascending press")
+                players.sort() { $0.targetPercentage < $1.targetPercentage }
+            default: // do something else
+            break
+        }
+        self.tableView.reloadData()
     }
     
     private func loadPlayersFromService() {

@@ -22,6 +22,7 @@
 		F8AB3B451DBD67820055AB81 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AB3B441DBD67820055AB81 /* Alamofire.framework */; };
 		F8CEA7F91DCFE07F0091BCB4 /* FPLPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA7F81DCFE07F0091BCB4 /* FPLPlayerService.swift */; };
 		F8CEA7FB1DCFE4A10091BCB4 /* FPLPlayersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */; };
+		F8DAF0881DDC15CB003BC719 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF0871DDC15CB003BC719 /* MainNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,18 +44,19 @@
 		F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersTableViewController.swift; sourceTree = "<group>"; };
 		F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerModel.swift; sourceTree = "<group>"; };
 		F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerTableViewCell.swift; sourceTree = "<group>"; };
-		F87087901D8125C5007DCE18 /* FirstTableApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstTableApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87087901D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyPremierLeaguePlayerPriceChanges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87087931D8125C5007DCE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F87087981D8125C5007DCE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F870879A1D8125C5007DCE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F870879D1D8125C5007DCE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F870879F1D8125C5007DCE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F87087A41D8125C5007DCE18 /* FirstTableAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstTableAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87087A41D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChangesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasyPremierLeaguePlayerPriceChangesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87087A81D8125C5007DCE18 /* FirstTableAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableAppTests.swift; sourceTree = "<group>"; };
 		F87087AA1D8125C5007DCE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8AB3B441DBD67820055AB81 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Release-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		F8CEA7F81DCFE07F0091BCB4 /* FPLPlayerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerService.swift; sourceTree = "<group>"; };
 		F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersModel.swift; sourceTree = "<group>"; };
+		F8DAF0871DDC15CB003BC719 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		FB6773B83FAB53FE285BB2CD /* Pods_FirstTableApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstTableApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBD0F1FE8BA2066CFC5DE11 /* Pods-FirstTableApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,8 +119,8 @@
 		F87087911D8125C5007DCE18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F87087901D8125C5007DCE18 /* FirstTableApp.app */,
-				F87087A41D8125C5007DCE18 /* FirstTableAppTests.xctest */,
+				F87087901D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges.app */,
+				F87087A41D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChangesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +130,7 @@
 			children = (
 				F87087931D8125C5007DCE18 /* AppDelegate.swift */,
 				F87087971D8125C5007DCE18 /* Main.storyboard */,
+				F8DAF0871DDC15CB003BC719 /* MainNavigationViewController.swift */,
 				F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */,
 				F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */,
 				F870879A1D8125C5007DCE18 /* Assets.xcassets */,
@@ -151,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F870878F1D8125C5007DCE18 /* FirstTableApp */ = {
+		F870878F1D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F87087AD1D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FirstTableApp" */;
+			buildConfigurationList = F87087AD1D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FantasyPremierLeaguePlayerPriceChanges" */;
 			buildPhases = (
 				9C2329FF4282B5BE8AA5E5C1 /* [CP] Check Pods Manifest.lock */,
 				F870878D1D8125C5007DCE18 /* Frameworks */,
@@ -166,14 +169,14 @@
 			);
 			dependencies = (
 			);
-			name = FirstTableApp;
+			name = FantasyPremierLeaguePlayerPriceChanges;
 			productName = FirstTableApp;
-			productReference = F87087901D8125C5007DCE18 /* FirstTableApp.app */;
+			productReference = F87087901D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F87087A31D8125C5007DCE18 /* FirstTableAppTests */ = {
+		F87087A31D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChangesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F87087B01D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FirstTableAppTests" */;
+			buildConfigurationList = F87087B01D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FantasyPremierLeaguePlayerPriceChangesTests" */;
 			buildPhases = (
 				702F16851BDC08E9AC9ADAED /* [CP] Check Pods Manifest.lock */,
 				F87087A01D8125C5007DCE18 /* Sources */,
@@ -187,9 +190,9 @@
 			dependencies = (
 				F87087A61D8125C5007DCE18 /* PBXTargetDependency */,
 			);
-			name = FirstTableAppTests;
+			name = FantasyPremierLeaguePlayerPriceChangesTests;
 			productName = FirstTableAppTests;
-			productReference = F87087A41D8125C5007DCE18 /* FirstTableAppTests.xctest */;
+			productReference = F87087A41D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChangesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F870878B1D8125C5007DCE18 /* Build configuration list for PBXProject "FirstTableApp" */;
+			buildConfigurationList = F870878B1D8125C5007DCE18 /* Build configuration list for PBXProject "FantasyPremierLeaguePlayerPriceChanges" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -228,8 +231,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F870878F1D8125C5007DCE18 /* FirstTableApp */,
-				F87087A31D8125C5007DCE18 /* FirstTableAppTests */,
+				F870878F1D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges */,
+				F87087A31D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChangesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -357,6 +360,7 @@
 				F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */,
 				F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */,
 				F8CEA7FB1DCFE4A10091BCB4 /* FPLPlayersModel.swift in Sources */,
+				F8DAF0881DDC15CB003BC719 /* MainNavigationViewController.swift in Sources */,
 				F832BDC31DB729BE006027FB /* FPLPlayersTableViewController.swift in Sources */,
 				F8CEA7F91DCFE07F0091BCB4 /* FPLPlayerService.swift in Sources */,
 			);
@@ -376,7 +380,7 @@
 /* Begin PBXTargetDependency section */
 		F87087A61D8125C5007DCE18 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F870878F1D8125C5007DCE18 /* FirstTableApp */;
+			target = F870878F1D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges */;
 			targetProxy = F87087A51D8125C5007DCE18 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -537,7 +541,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FirstTableAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstTableApp.app/FirstTableApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FantasyPremierLeaguePlayerPriceChanges.app/FantasyPremierLeaguePlayerPriceChanges";
 			};
 			name = Debug;
 		};
@@ -551,14 +555,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FirstTableAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstTableApp.app/FirstTableApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FantasyPremierLeaguePlayerPriceChanges.app/FantasyPremierLeaguePlayerPriceChanges";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F870878B1D8125C5007DCE18 /* Build configuration list for PBXProject "FirstTableApp" */ = {
+		F870878B1D8125C5007DCE18 /* Build configuration list for PBXProject "FantasyPremierLeaguePlayerPriceChanges" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F87087AB1D8125C5007DCE18 /* Debug */,
@@ -567,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F87087AD1D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FirstTableApp" */ = {
+		F87087AD1D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FantasyPremierLeaguePlayerPriceChanges" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F87087AE1D8125C5007DCE18 /* Debug */,
@@ -576,7 +580,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F87087B01D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FirstTableAppTests" */ = {
+		F87087B01D8125C5007DCE18 /* Build configuration list for PBXNativeTarget "FantasyPremierLeaguePlayerPriceChangesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F87087B11D8125C5007DCE18 /* Debug */,

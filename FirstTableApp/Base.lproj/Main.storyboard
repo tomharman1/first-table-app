@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gbU-2x-IQs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nSk-2A-5hN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Players Table View Controller-->
+        <!--Sort-->
         <scene sceneID="RxC-ct-RK8">
             <objects>
-                <tableViewController id="2WQ-ua-krV" customClass="FPLPlayersTableViewController" customModule="FirstTableApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2WQ-ua-krV" customClass="FPLPlayersTableViewController" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="VDE-qH-2pm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FPLPlayerHeaderTableViewCell" id="Ub4-Zb-U2b" customClass="FPLPlayerHeaderTableViewCell" customModule="FirstTableApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FPLPlayerHeaderTableViewCell" id="Ub4-Zb-U2b" customClass="FPLPlayerHeaderTableViewCell" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ub4-Zb-U2b" id="WCw-yY-wEy">
@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NTI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFO-2x-GdO">
-                                            <rect key="frame" x="257" y="15" width="60" height="14.5"/>
+                                            <rect key="frame" x="257" y="15" width="60" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="RnF-ck-EwB"/>
                                             </constraints>
@@ -36,7 +36,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOE-IM-RxK">
-                                            <rect key="frame" x="325" y="15" width="50" height="14.5"/>
+                                            <rect key="frame" x="325" y="15" width="50" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="xSk-qo-3Mw"/>
                                             </constraints>
@@ -45,7 +45,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgX-Rk-1I3">
-                                            <rect key="frame" x="177" y="15" width="60" height="14.5"/>
+                                            <rect key="frame" x="177" y="15" width="60" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="phg-Pd-oH5"/>
                                             </constraints>
@@ -54,7 +54,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Player name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-El-jhe">
-                                            <rect key="frame" x="0.0" y="15" width="80" height="14.5"/>
+                                            <rect key="frame" x="0.0" y="15" width="80" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="CQx-yP-ZhE"/>
                                             </constraints>
@@ -63,7 +63,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qto-Vj-sfi">
-                                            <rect key="frame" x="117" y="15" width="60" height="14.5"/>
+                                            <rect key="frame" x="117" y="15" width="60" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="is5-ul-eRj"/>
                                             </constraints>
@@ -93,7 +93,7 @@
                                     <outlet property="teamNameLabel" destination="Qto-Vj-sfi" id="xh9-8K-8qP"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FPLPlayerTableViewCell" id="0zg-Bz-QKa" customClass="FPLPlayerTableViewCell" customModule="FirstTableApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FPLPlayerTableViewCell" id="0zg-Bz-QKa" customClass="FPLPlayerTableViewCell" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="73" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0zg-Bz-QKa" id="RKw-Yu-GuF">
@@ -101,7 +101,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NTI" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ4-nQ-tR8">
-                                            <rect key="frame" x="242" y="15" width="60" height="14.5"/>
+                                            <rect key="frame" x="242" y="15" width="60" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="H3S-uX-50s"/>
                                             </constraints>
@@ -110,13 +110,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Player name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-5c-vqj">
-                                            <rect key="frame" x="8" y="16" width="68.5" height="14.5"/>
+                                            <rect key="frame" x="8" y="15" width="69" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-ce-dfs">
-                                            <rect key="frame" x="162" y="15" width="60" height="14.5"/>
+                                            <rect key="frame" x="162" y="15" width="60" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="t74-PY-XjK"/>
                                             </constraints>
@@ -125,7 +125,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="BCP-Tt-tMO">
-                                            <rect key="frame" x="102" y="15" width="60" height="14.5"/>
+                                            <rect key="frame" x="102" y="15" width="60" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="eiy-4x-aFV"/>
                                             </constraints>
@@ -134,7 +134,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target %" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-cs-BhS">
-                                            <rect key="frame" x="327" y="15" width="40" height="14.5"/>
+                                            <rect key="frame" x="327" y="15" width="40" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="Awa-9E-sDi"/>
                                             </constraints>
@@ -170,29 +170,40 @@
                             <outlet property="delegate" destination="2WQ-ua-krV" id="J4N-So-FmV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="71U-nu-rYK"/>
+                    <navigationItem key="navigationItem" title="Sort" id="71U-nu-rYK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtF-kg-tly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="wMS-js-YHU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </pickerView>
             </objects>
-            <point key="canvasLocation" x="1011.544227886057" y="178.40000000000001"/>
+            <point key="canvasLocation" x="2116" y="178.56071964017991"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8uK-ZW-ven">
+        <!--Main Navigation View Controller-->
+        <scene sceneID="3It-sy-Ao2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gbU-2x-IQs" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="nSk-2A-5hN" customClass="MainNavigationViewController" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LUg-4t-4Vx">
+                    <navigationItem key="navigationItem" id="qoT-9v-GjW"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LjO-Zj-xoW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="MSy-68-2Xp">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.045271711115884905" green="0.31963771449089606" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="2WQ-ua-krV" kind="relationship" relationship="rootViewController" id="rWh-MI-D3h"/>
+                        <segue destination="2WQ-ua-krV" kind="relationship" relationship="rootViewController" id="ATt-Sx-MBA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T8P-7y-Idf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sR-qU-xSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="247.65625" y="179.8828125"/>
+            <point key="canvasLocation" x="1176.8" y="178.56071964017991"/>
         </scene>
     </scenes>
 </document>
