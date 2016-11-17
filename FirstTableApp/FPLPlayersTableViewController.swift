@@ -47,14 +47,23 @@ class FPLPlayersTableViewController: UITableViewController {
         switch sender.title! {
             case self.RISING_TITLE_LABEL :
 //                print("got descending press")
-                players.sort() { $0.targetPercentage > $1.targetPercentage }
+                sortAscending()
             case self.FALLING_TITLE_LABEL :
 //                print("got ascending press")
-                players.sort() { $0.targetPercentage < $1.targetPercentage }
+                sortDescending()
             default: // do something else
             break
         }
         self.tableView.reloadData()
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
+    }
+
+    private func sortAscending() {
+        players.sort() { $0.targetPercentage > $1.targetPercentage }
+    }
+
+    private func sortDescending() {
+        players.sort() { $0.targetPercentage < $1.targetPercentage }
     }
     
     private func loadPlayersFromService() {
@@ -62,6 +71,7 @@ class FPLPlayersTableViewController: UITableViewController {
         _ = self.fplPlayersModel.refresh(complete: {
             self.players = self.fplPlayersModel.players
             (self.tableView as! LoadingTableView).hideLoadingIndicator()
+            self.sortAscending()
             self.tableView.reloadData()
         })
     }
