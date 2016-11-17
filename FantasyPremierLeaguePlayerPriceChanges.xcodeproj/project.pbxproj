@@ -13,6 +13,7 @@
 		F832BDC31DB729BE006027FB /* FPLPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */; };
 		F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
 		F832BDC81DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
+		F835F1C81DDD6EDA004278FE /* LoadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F835F1C71DDD6EDA004278FE /* LoadingTableView.swift */; };
 		F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */; };
 		F87087941D8125C5007DCE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87087931D8125C5007DCE18 /* AppDelegate.swift */; };
 		F87087991D8125C5007DCE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87087971D8125C5007DCE18 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersTableViewController.swift; sourceTree = "<group>"; };
 		F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerModel.swift; sourceTree = "<group>"; };
+		F835F1C71DDD6EDA004278FE /* LoadingTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableView.swift; sourceTree = "<group>"; };
 		F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerTableViewCell.swift; sourceTree = "<group>"; };
 		F87087901D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyPremierLeaguePlayerPriceChanges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87087931D8125C5007DCE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				F87087931D8125C5007DCE18 /* AppDelegate.swift */,
 				F87087971D8125C5007DCE18 /* Main.storyboard */,
+				F835F1C71DDD6EDA004278FE /* LoadingTableView.swift */,
 				F8DAF0871DDC15CB003BC719 /* MainNavigationViewController.swift */,
 				F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */,
 				F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */,
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F835F1C81DDD6EDA004278FE /* LoadingTableView.swift in Sources */,
 				F87087941D8125C5007DCE18 /* AppDelegate.swift in Sources */,
 				F80004D61DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift in Sources */,
 				F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */,

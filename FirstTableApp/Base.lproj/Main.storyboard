@@ -14,7 +14,7 @@
         <scene sceneID="RxC-ct-RK8">
             <objects>
                 <tableViewController id="2WQ-ua-krV" customClass="FPLPlayersTableViewController" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="VDE-qH-2pm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="VDE-qH-2pm" customClass="LoadingTableView" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -173,10 +173,6 @@
                     <navigationItem key="navigationItem" title="Sort" id="71U-nu-rYK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtF-kg-tly" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pickerView contentMode="scaleToFill" id="wMS-js-YHU">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                </pickerView>
             </objects>
             <point key="canvasLocation" x="2116" y="178.56071964017991"/>
         </scene>

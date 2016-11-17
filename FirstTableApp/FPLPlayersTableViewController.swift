@@ -24,8 +24,8 @@ class FPLPlayersTableViewController: UITableViewController {
         
         self.tableView.rowHeight = 35
         
-         loadSamplePlayers()
-//        loadPlayersFromService()
+//         loadSamplePlayers()
+        loadPlayersFromService()
         
         var items = [UIBarButtonItem]()
         items.append(
@@ -58,8 +58,10 @@ class FPLPlayersTableViewController: UITableViewController {
     }
     
     private func loadPlayersFromService() {
+        (self.tableView as! LoadingTableView).showLoadingIndicator()
         _ = self.fplPlayersModel.refresh(complete: {
             self.players = self.fplPlayersModel.players
+            (self.tableView as! LoadingTableView).hideLoadingIndicator()
             self.tableView.reloadData()
         })
     }
