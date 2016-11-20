@@ -22,6 +22,7 @@ class FPLPlayersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.rowHeight = 35
         
 //         loadSamplePlayers()
@@ -39,8 +40,7 @@ class FPLPlayersTableViewController: UITableViewController {
         )
         
         self.setToolbarItems(items, animated: false)
-        self.navigationController?.setToolbarHidden(false, animated: true)
-//        self.setToolbarHidden(false, animated: true)
+        self.navigationController?.setToolbarHidden(true, animated: true)
     }
     
     func onClickedSortButton(sender: UIBarButtonItem) {
@@ -73,6 +73,8 @@ class FPLPlayersTableViewController: UITableViewController {
             (self.tableView as! LoadingTableView).hideLoadingIndicator()
             self.sortAscending()
             self.tableView.reloadData()
+            self.tableView.isHidden = false
+            self.navigationController?.setToolbarHidden(false, animated: true)
         })
     }
 
@@ -81,6 +83,7 @@ class FPLPlayersTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -95,14 +98,8 @@ class FPLPlayersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = indexPath.row == 0 ? "FPLPlayerHeaderTableViewCell" : "FPLPlayerTableViewCell"
         
-        if (indexPath.row == 0) {
+        if (indexPath.row == 0) { // table head
             return self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! FPLPlayerHeaderTableViewCell
-            
-//            cell.playerNameLabel.text = "name"
-//            cell.teamNameLabel.text = "team"
-//            cell.priceLabel.text = "price"
-//            cell.netTransfersInLabel.text = "NTI"
-//            cell.targetPercentageLabel.text = "%"
         }
         else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FPLPlayerTableViewCell

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "soccer_image.png",
+      "filename" : "smaller_soccer_ball.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "soccer_image-2.png",
+      "filename" : "smaller_soccer_ball-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "soccer_image-1.png",
+      "filename" : "smaller_soccer_ball-2.png",
       "scale" : "3x"
     }
   ],
