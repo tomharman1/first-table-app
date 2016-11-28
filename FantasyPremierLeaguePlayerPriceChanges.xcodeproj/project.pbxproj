@@ -23,7 +23,6 @@
 		F8AB3B451DBD67820055AB81 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AB3B441DBD67820055AB81 /* Alamofire.framework */; };
 		F8CEA7F91DCFE07F0091BCB4 /* FPLPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA7F81DCFE07F0091BCB4 /* FPLPlayerService.swift */; };
 		F8CEA7FB1DCFE4A10091BCB4 /* FPLPlayersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */; };
-		F8DAF0881DDC15CB003BC719 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DAF0871DDC15CB003BC719 /* MainNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,6 @@
 		F8AB3B441DBD67820055AB81 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Release-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		F8CEA7F81DCFE07F0091BCB4 /* FPLPlayerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerService.swift; sourceTree = "<group>"; };
 		F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersModel.swift; sourceTree = "<group>"; };
-		F8DAF0871DDC15CB003BC719 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		FB6773B83FAB53FE285BB2CD /* Pods_FirstTableApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstTableApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBD0F1FE8BA2066CFC5DE11 /* Pods-FirstTableApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +131,6 @@
 				F87087931D8125C5007DCE18 /* AppDelegate.swift */,
 				F87087971D8125C5007DCE18 /* Main.storyboard */,
 				F835F1C71DDD6EDA004278FE /* LoadingTableView.swift */,
-				F8DAF0871DDC15CB003BC719 /* MainNavigationViewController.swift */,
 				F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */,
 				F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */,
 				F870879A1D8125C5007DCE18 /* Assets.xcassets */,
@@ -364,7 +361,6 @@
 				F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */,
 				F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */,
 				F8CEA7FB1DCFE4A10091BCB4 /* FPLPlayersModel.swift in Sources */,
-				F8DAF0881DDC15CB003BC719 /* MainNavigationViewController.swift in Sources */,
 				F832BDC31DB729BE006027FB /* FPLPlayersTableViewController.swift in Sources */,
 				F8CEA7F91DCFE07F0091BCB4 /* FPLPlayerService.swift in Sources */,
 			);

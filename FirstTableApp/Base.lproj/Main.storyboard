@@ -176,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="2116" y="178.56071964017991"/>
         </scene>
-        <!--Main Navigation View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="3It-sy-Ao2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="nSk-2A-5hN" customClass="MainNavigationViewController" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="nSk-2A-5hN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="qoT-9v-GjW"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>

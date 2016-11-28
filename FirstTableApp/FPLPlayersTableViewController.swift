@@ -25,9 +25,27 @@ class FPLPlayersTableViewController: UITableViewController {
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.rowHeight = 35
         
-//         loadSamplePlayers()
-        loadPlayersFromService()
+        self.addSortButtons()
+        self.navigationController?.setToolbarHidden(true, animated: true)
         
+        loadSamplePlayers()
+//        loadPlayersFromService()
+    }
+    
+    func onClickedSortButton(sender: UIBarButtonItem) {
+        switch sender.title! {
+            case self.RISING_TITLE_LABEL :
+                sortAscending()
+            case self.FALLING_TITLE_LABEL :
+                sortDescending()
+            default: // do something else
+            break
+        }
+        self.tableView.reloadData()
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
+    }
+    
+    private func addSortButtons() {
         var items = [UIBarButtonItem]()
         items.append(
             UIBarButtonItem(title: RISING_TITLE_LABEL, style: .plain, target: self, action: #selector(onClickedSortButton(sender:)))
@@ -40,22 +58,6 @@ class FPLPlayersTableViewController: UITableViewController {
         )
         
         self.setToolbarItems(items, animated: false)
-        self.navigationController?.setToolbarHidden(true, animated: true)
-    }
-    
-    func onClickedSortButton(sender: UIBarButtonItem) {
-        switch sender.title! {
-            case self.RISING_TITLE_LABEL :
-//                print("got descending press")
-                sortAscending()
-            case self.FALLING_TITLE_LABEL :
-//                print("got ascending press")
-                sortDescending()
-            default: // do something else
-            break
-        }
-        self.tableView.reloadData()
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
     }
 
     private func sortAscending() {
@@ -91,7 +93,7 @@ class FPLPlayersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count
+        return players.count + 1 // for the header
     }
 
     
@@ -102,9 +104,9 @@ class FPLPlayersTableViewController: UITableViewController {
             return self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! FPLPlayerHeaderTableViewCell
         }
         else {
+            let index = (indexPath as NSIndexPath).row - 1
             let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FPLPlayerTableViewCell
-            
-            let player = players[(indexPath as NSIndexPath).row]
+            let player = players[index]
             
             cell.playerNameLabel.text = player.name
             cell.teamNameLabel.text = player.team
