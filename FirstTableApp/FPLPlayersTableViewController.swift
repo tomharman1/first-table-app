@@ -123,6 +123,19 @@ class FPLPlayersTableViewController: UITableViewController {
             cell.netTransfersInLabel.text = String(player.netTransfersIn)
             cell.targetPercentageLabel.text = String(player.targetPercentage)
             
+            if (player.targetPercentage > 100) {
+                cell.targetPercentageLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
+                cell.targetPercentageLabel.textColor = UIColor.green
+            }
+            else if (player.targetPercentage < -100) {
+                cell.targetPercentageLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
+                cell.targetPercentageLabel.textColor = UIColor.red
+            }
+            else {
+                cell.targetPercentageLabel.font = UIFont.systemFont(ofSize: 12.0, weight: 0)
+                cell.targetPercentageLabel.textColor = UIColor.black
+            }
+            
             return cell
         }
     }
