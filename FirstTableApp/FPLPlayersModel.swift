@@ -31,7 +31,7 @@ class FPLPlayersModel {
                     
                     for player in playersArray {
                         let fplPlayer = FPLPlayerModel(name: player["player_name_short"]! as! String,
-                                                       team:player["team"]! as! String,
+                                                       team:player["short_team_name"]! as! String,
                                                        price:player["price"]! as! Double,
                                                        netTransfersIn:Int32((player["net_transfers_in"] as! NSNumber).intValue),
                                                        targetPercentage:player["target_percentage"]! as! Double)
