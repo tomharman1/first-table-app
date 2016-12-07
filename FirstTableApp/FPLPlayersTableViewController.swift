@@ -28,8 +28,8 @@ class FPLPlayersTableViewController: UITableViewController {
         self.addSortButtons()
         self.navigationController?.setToolbarHidden(true, animated: true)
         
-        loadSamplePlayers()
-//        loadPlayersFromService()
+//        loadSamplePlayers()
+        loadPlayersFromService()
     }
     
     func onClickedSortButton(sender: UIBarButtonItem) {
@@ -105,8 +105,17 @@ class FPLPlayersTableViewController: UITableViewController {
         }
         else {
             let index = (indexPath as NSIndexPath).row - 1
+            let isEvenIndex = (index % 2) == 0
             let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FPLPlayerTableViewCell
             let player = players[index]
+            let lightGray = UIColor.lightGray.withAlphaComponent(0.1)
+            
+            if (isEvenIndex) {
+                cell.backgroundColor = lightGray
+            }
+            else {
+                cell.backgroundColor = UIColor.clear
+            }
             
             cell.playerNameLabel.text = player.name
             cell.teamNameLabel.text = player.team
