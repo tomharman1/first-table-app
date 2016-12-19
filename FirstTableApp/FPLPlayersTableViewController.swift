@@ -11,13 +11,16 @@ import UIKit
 class FPLPlayersTableViewController: UITableViewController {
 
     // MARK: static strings
-    let RISING_TITLE_LABEL = "Rising"
-    let FALLING_TITLE_LABEL = "Falling"
+    let SORT_LABEL = "Sort"
     
     // MARK: Properties
     let fplPlayersModel = FPLPlayersModel()
     var players = [FPLPlayerModel]()
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,56 +28,121 @@ class FPLPlayersTableViewController: UITableViewController {
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.rowHeight = 35
         
+        self.tableView.delegate = self
+        
         self.addSortButtons()
         self.navigationController?.setToolbarHidden(true, animated: true)
+        
+        self.view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        
+        let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
+        view.addConstraint(horizontalConstraint)
+        
+        let verticalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
+        view.addConstraint(verticalConstraint)
         
 //        loadSamplePlayers()
         loadPlayersFromService()
     }
     
-    func onClickedSortButton(sender: UIBarButtonItem) {
-        switch sender.title! {
-            case self.RISING_TITLE_LABEL :
-                sortAscending()
-            case self.FALLING_TITLE_LABEL :
-                sortDescending()
-            default: // do something else
-            break
+    override public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.navigationController?.setToolbarHidden(true, animated: true)
+    }
+    
+    override public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let delayInSeconds = 1.5
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+            // here code perfomed with delay
+            self.navigationController?.setToolbarHidden(false, animated: true)
+            
         }
-        self.tableView.reloadData()
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
+    }
+    
+    func onClickedSortButton(sender: UIBarButtonItem) {
+        showSortByMenu()
+//        self.tableView.reloadData()
+//        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
+    }
+    
+    private func showSortByMenu() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            // do something
+        })
+        alertController.addAction(cancelAction)
+        
+        let sortByRising = UIAlertAction(title: "Rising", style: .default, handler: { action in
+            // sort by rising
+            self.sortAscending()
+        })
+        alertController.addAction(sortByRising)
+        
+        let sortByFalling = UIAlertAction(title: "Falling", style: .default, handler: { action in
+            // sort by falling
+            self.sortDescending()
+        })
+        alertController.addAction(sortByFalling)
+        
+        let sortByNetTransfersIn = UIAlertAction(title: "Net Transfers In", style: .default, handler: { action in
+            // sort by NTI
+            self.sortNetTransfersIn()
+        })
+        alertController.addAction(sortByNetTransfersIn)
+        
+        let sortByNetTransfersOut = UIAlertAction(title: "New Transfers Out", style: .default, handler: { action in
+            // sort by NTO
+            self.sortNetTransfersOut()
+        })
+        alertController.addAction(sortByNetTransfersOut)
+        
+        self.present(alertController, animated: true, completion: {})
+        
     }
     
     private func addSortButtons() {
         var items = [UIBarButtonItem]()
         items.append(
-            UIBarButtonItem(title: RISING_TITLE_LABEL, style: .plain, target: self, action: #selector(onClickedSortButton(sender:)))
-        )
-        items.append(
             UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         )
-        items.append(
-            UIBarButtonItem(title: FALLING_TITLE_LABEL, style: .plain, target: self, action: #selector(onClickedSortButton(sender:)))
-        )
+        
+        items.append(UIBarButtonItem(image: UIImage(named: "sort_image"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(onClickedSortButton(sender:))))
         
         self.setToolbarItems(items, animated: false)
     }
 
+    private func sortNetTransfersIn() {
+        players.sort() { $0.netTransfersIn > $1.netTransfersIn }
+        self.tableView.reloadData()
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
+    }
+    
+    private func sortNetTransfersOut() {
+        players.sort() { $0.netTransfersIn < $1.netTransfersIn }
+        self.tableView.reloadData()
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
+    }
+    
     private func sortAscending() {
         players.sort() { $0.targetPercentage > $1.targetPercentage }
+        self.tableView.reloadData()
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
     }
 
     private func sortDescending() {
         players.sort() { $0.targetPercentage < $1.targetPercentage }
+        self.tableView.reloadData()
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
     }
     
     private func loadPlayersFromService() {
-        (self.tableView as! LoadingTableView).showLoadingIndicator()
+        self.activityIndicator.startAnimating()
         _ = self.fplPlayersModel.refresh(complete: {
             self.players = self.fplPlayersModel.players
-            (self.tableView as! LoadingTableView).hideLoadingIndicator()
+            self.activityIndicator.stopAnimating()
             self.sortAscending()
-            self.tableView.reloadData()
             self.tableView.isHidden = false
             self.navigationController?.setToolbarHidden(false, animated: true)
         })
@@ -93,18 +161,20 @@ class FPLPlayersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count + 1 // for the header
+        return players.count // for the header
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = indexPath.row == 0 ? "FPLPlayerHeaderTableViewCell" : "FPLPlayerTableViewCell"
+//        let cellIdentifier = indexPath.row == 0 ? "FPLPlayerHeaderTableViewCell" : "FPLPlayerTableViewCell"
+        let cellIdentifier = "FPLPlayerTableViewCell"
         
-        if (indexPath.row == 0) { // table head
-            return self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! FPLPlayerHeaderTableViewCell
-        }
-        else {
-            let index = (indexPath as NSIndexPath).row - 1
+//        if (indexPath.row == 0) { // table head
+//            return self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! FPLPlayerHeaderTableViewCell
+//        }
+//        else {
+//            let index = (indexPath as NSIndexPath).row - 1
+            let index = (indexPath as NSIndexPath).row
             let isEvenIndex = (index % 2) == 0
             let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FPLPlayerTableViewCell
             let player = players[index]
@@ -125,7 +195,9 @@ class FPLPlayersTableViewController: UITableViewController {
             
             if (player.targetPercentage > 100) {
                 cell.targetPercentageLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
-                cell.targetPercentageLabel.textColor = UIColor.green
+//                # https://www.ralfebert.de/snippets/ios/swift-uicolor-picker/
+                let greenColor = UIColor(red: 0, green: 0.8392, blue: 0.2353, alpha: 1.0)
+                cell.targetPercentageLabel.textColor = greenColor
             }
             else if (player.targetPercentage < -100) {
                 cell.targetPercentageLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
@@ -137,7 +209,7 @@ class FPLPlayersTableViewController: UITableViewController {
             }
             
             return cell
-        }
+//        }
     }
     
     private func loadSamplePlayers() {

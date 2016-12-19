@@ -14,94 +14,20 @@
         <scene sceneID="RxC-ct-RK8">
             <objects>
                 <tableViewController id="2WQ-ua-krV" customClass="FPLPlayersTableViewController" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="VDE-qH-2pm" customClass="LoadingTableView" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="VDE-qH-2pm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FPLPlayerHeaderTableViewCell" id="Ub4-Zb-U2b" customClass="FPLPlayerHeaderTableViewCell" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ub4-Zb-U2b" id="WCw-yY-wEy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NTI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFO-2x-GdO">
-                                            <rect key="frame" x="257" y="15" width="60" height="15"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="RnF-ck-EwB"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOE-IM-RxK">
-                                            <rect key="frame" x="325" y="15" width="50" height="15"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="xSk-qo-3Mw"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgX-Rk-1I3">
-                                            <rect key="frame" x="177" y="15" width="60" height="15"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="phg-Pd-oH5"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Player name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-El-jhe">
-                                            <rect key="frame" x="0.0" y="15" width="80" height="15"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="CQx-yP-ZhE"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qto-Vj-sfi">
-                                            <rect key="frame" x="117" y="15" width="60" height="15"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="is5-ul-eRj"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="GOE-IM-RxK" firstAttribute="trailing" secondItem="WCw-yY-wEy" secondAttribute="trailingMargin" constant="8" id="2yE-X0-3pA"/>
-                                        <constraint firstItem="tFO-2x-GdO" firstAttribute="leading" secondItem="dgX-Rk-1I3" secondAttribute="trailing" constant="20" id="Aen-L2-Uab"/>
-                                        <constraint firstItem="dgX-Rk-1I3" firstAttribute="leading" secondItem="Qto-Vj-sfi" secondAttribute="trailing" id="Bfr-cI-AwD"/>
-                                        <constraint firstItem="Qto-Vj-sfi" firstAttribute="centerY" secondItem="WCw-yY-wEy" secondAttribute="centerY" id="DwK-cd-9Nz"/>
-                                        <constraint firstItem="m5h-El-jhe" firstAttribute="centerY" secondItem="WCw-yY-wEy" secondAttribute="centerY" id="EmZ-1T-Nob"/>
-                                        <constraint firstItem="tFO-2x-GdO" firstAttribute="centerY" secondItem="WCw-yY-wEy" secondAttribute="centerY" id="Eud-hg-g5X"/>
-                                        <constraint firstItem="GOE-IM-RxK" firstAttribute="centerY" secondItem="WCw-yY-wEy" secondAttribute="centerY" id="ags-kv-tVE"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="m5h-El-jhe" secondAttribute="leading" constant="8" id="eNV-PT-jLy"/>
-                                        <constraint firstItem="dgX-Rk-1I3" firstAttribute="centerY" secondItem="WCw-yY-wEy" secondAttribute="centerY" id="gPv-hP-eT5"/>
-                                        <constraint firstItem="GOE-IM-RxK" firstAttribute="leading" secondItem="tFO-2x-GdO" secondAttribute="trailing" constant="8" id="iLs-Ze-8t5"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="netTransfersInLabel" destination="tFO-2x-GdO" id="OCS-Xo-xUu"/>
-                                    <outlet property="playerNameLabel" destination="m5h-El-jhe" id="1d3-14-zxB"/>
-                                    <outlet property="priceLabel" destination="dgX-Rk-1I3" id="vIX-9K-5ag"/>
-                                    <outlet property="targetPercentageLabel" destination="GOE-IM-RxK" id="Zpv-wT-zEX"/>
-                                    <outlet property="teamNameLabel" destination="Qto-Vj-sfi" id="xh9-8K-8qP"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FPLPlayerTableViewCell" id="0zg-Bz-QKa" customClass="FPLPlayerTableViewCell" customModule="FantasyPremierLeaguePlayerPriceChanges" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="73" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0zg-Bz-QKa" id="RKw-Yu-GuF">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NTI" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ4-nQ-tR8">
-                                            <rect key="frame" x="242" y="15" width="60" height="15"/>
+                                            <rect key="frame" x="219" y="15" width="60" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="H3S-uX-50s"/>
                                             </constraints>
@@ -110,13 +36,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Player name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-5c-vqj">
-                                            <rect key="frame" x="8" y="15" width="69" height="15"/>
+                                            <rect key="frame" x="16" y="15" width="69" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-ce-dfs">
-                                            <rect key="frame" x="162" y="15" width="60" height="15"/>
+                                            <rect key="frame" x="144" y="15" width="60" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="t74-PY-XjK"/>
                                             </constraints>
@@ -125,7 +51,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="BCP-Tt-tMO">
-                                            <rect key="frame" x="102" y="15" width="60" height="15"/>
+                                            <rect key="frame" x="84" y="15" width="60" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="eiy-4x-aFV"/>
                                             </constraints>
@@ -134,7 +60,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target %" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-cs-BhS">
-                                            <rect key="frame" x="327" y="15" width="40" height="15"/>
+                                            <rect key="frame" x="319" y="15" width="40" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="Awa-9E-sDi"/>
                                             </constraints>
@@ -147,14 +73,15 @@
                                         <constraint firstItem="xc3-5c-vqj" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="DS9-1C-roQ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="NWq-cs-BhS" secondAttribute="trailing" id="N4O-2g-tsH"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="xc3-5c-vqj" secondAttribute="leading" id="NLr-ca-DkF"/>
-                                        <constraint firstItem="NWq-cs-BhS" firstAttribute="leading" secondItem="eJ4-nQ-tR8" secondAttribute="trailing" constant="25" id="Ox6-Kl-g4F"/>
-                                        <constraint firstItem="eJ4-nQ-tR8" firstAttribute="leading" secondItem="i3z-ce-dfs" secondAttribute="trailing" constant="20" id="RNh-It-HxH"/>
+                                        <constraint firstItem="NWq-cs-BhS" firstAttribute="leading" secondItem="eJ4-nQ-tR8" secondAttribute="trailing" constant="40" id="Ox6-Kl-g4F"/>
+                                        <constraint firstItem="eJ4-nQ-tR8" firstAttribute="leading" secondItem="i3z-ce-dfs" secondAttribute="trailing" constant="15" id="RNh-It-HxH"/>
                                         <constraint firstItem="eJ4-nQ-tR8" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="erL-8p-uWw"/>
                                         <constraint firstItem="i3z-ce-dfs" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="exk-21-NvJ"/>
                                         <constraint firstItem="BCP-Tt-tMO" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="kp9-FT-4dy"/>
                                         <constraint firstItem="i3z-ce-dfs" firstAttribute="leading" secondItem="BCP-Tt-tMO" secondAttribute="trailing" id="rIJ-hR-kRh"/>
                                         <constraint firstItem="NWq-cs-BhS" firstAttribute="centerY" secondItem="RKw-Yu-GuF" secondAttribute="centerY" id="zJi-4y-crz"/>
                                     </constraints>
+                                    <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="netTransfersInLabel" destination="eJ4-nQ-tR8" id="GHN-C5-p22"/>
