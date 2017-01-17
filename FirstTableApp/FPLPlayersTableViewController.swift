@@ -12,59 +12,95 @@ class FPLPlayersTableViewController: UITableViewController {
 
     // MARK: static strings
     let SORT_LABEL = "Sort"
+    let STATUS_BAR_Y_OFFSET = 0
     
     // MARK: Properties
     let fplPlayersModel = FPLPlayersModel()
     var players = [FPLPlayerModel]()
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    var activityIndicatorContainer: UIView
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    required init?(coder aDecoder: NSCoder) {
+        self.activityIndicatorContainer = UIView()
+        super.init(coder: aDecoder)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        self.navigationController?.setToolbarHidden(true, animated: true)
+        self.navigationController?.isNavigationBarHidden = true
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.rowHeight = 35
         
-        self.tableView.delegate = self
-        
-        self.addSortButtons()
-        self.navigationController?.setToolbarHidden(true, animated: true)
-        
-        self.view.addSubview(activityIndicator)
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.hidesWhenStopped = true
-        
-        let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
-        view.addConstraint(horizontalConstraint)
-        
-        let verticalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
-        view.addConstraint(verticalConstraint)
+        self.setupToolbar(lastUpdatedTitle: "Just Now")
+        self.setupActivityIndicator()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
 //        loadSamplePlayers()
         loadPlayersFromService()
     }
     
-    override public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        self.navigationController?.setToolbarHidden(true, animated: true)
-    }
-    
-    override public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        let delayInSeconds = 1.5
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
-            // here code perfomed with delay
-            self.navigationController?.setToolbarHidden(false, animated: true)
-            
-        }
-    }
+//    override public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+//        self.navigationController?.setToolbarHidden(true, animated: true)
+//    }
+//    
+//    override public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        
+//        let delayInSeconds = 1.5
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+//            // here code perfomed with delay
+//            self.navigationController?.setToolbarHidden(false, animated: true)
+//            
+//        }
+//    }
     
     func onClickedSortButton(sender: UIBarButtonItem) {
         showSortByMenu()
 //        self.tableView.reloadData()
 //        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
+    }
+    
+    func onClickedRefreshButton(sender: UIBarButtonItem) {
+        loadPlayersFromService()
+    }
+    
+    private func setupActivityIndicator() {
+        self.activityIndicatorContainer.translatesAutoresizingMaskIntoConstraints = false
+        self.activityIndicatorContainer.frame = self.tableView.frame
+        self.activityIndicatorContainer.center = self.tableView.center
+        self.activityIndicatorContainer.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.3)
+        
+        let loadingView: UIView = UIView()
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        loadingView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
+        loadingView.center = self.tableView.center
+        loadingView.backgroundColor = UIColor(red:0.02, green:0.27, blue:0.27, alpha:0.7)
+        loadingView.clipsToBounds = true
+        loadingView.layer.cornerRadius = 10
+        
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        activityIndicator.center = CGPoint(x: loadingView.frame.size.width / 2.0, y: loadingView.frame.size.height / 2.0)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.startAnimating()
+        
+        loadingView.addSubview(activityIndicator)
+        self.activityIndicatorContainer.addSubview(loadingView)
+        self.tableView.addSubview(self.activityIndicatorContainer)
+        
+        
+//        let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
+//        view.addConstraint(horizontalConstraint)
+//        
+//        let verticalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
+//        view.addConstraint(verticalConstraint)
     }
     
     private func showSortByMenu() {
@@ -102,13 +138,25 @@ class FPLPlayersTableViewController: UITableViewController {
         
     }
     
-    private func addSortButtons() {
+    private func setupToolbar(lastUpdatedTitle: String) {
         var items = [UIBarButtonItem]()
+        
+        items.append(UIBarButtonItem(image: UIImage(named: "refresh_icon"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(onClickedRefreshButton(sender:))))
+        
+        items.append(
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        )
+        
+        items.append(
+            TitleUIBarButtonItem(text: "Last updated: \(lastUpdatedTitle)", font: UIFont.systemFont(ofSize: 10.0), color: UIColor.black)
+        )
+        
         items.append(
             UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         )
         
         items.append(UIBarButtonItem(image: UIImage(named: "sort_image"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(onClickedSortButton(sender:))))
+        
         
         self.setToolbarItems(items, animated: false)
     }
@@ -116,35 +164,39 @@ class FPLPlayersTableViewController: UITableViewController {
     private func sortNetTransfersIn() {
         players.sort() { $0.netTransfersIn > $1.netTransfersIn }
         self.tableView.reloadData()
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: STATUS_BAR_Y_OFFSET), animated: true)
     }
     
     private func sortNetTransfersOut() {
         players.sort() { $0.netTransfersIn < $1.netTransfersIn }
         self.tableView.reloadData()
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: STATUS_BAR_Y_OFFSET), animated: true)
     }
     
     private func sortAscending() {
         players.sort() { $0.targetPercentage > $1.targetPercentage }
         self.tableView.reloadData()
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: STATUS_BAR_Y_OFFSET), animated: true)
     }
 
     private func sortDescending() {
         players.sort() { $0.targetPercentage < $1.targetPercentage }
         self.tableView.reloadData()
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: STATUS_BAR_Y_OFFSET), animated: true)
     }
     
     private func loadPlayersFromService() {
-        self.activityIndicator.startAnimating()
+//        self.tableView.isHidden = true
+        self.activityIndicatorContainer.isHidden = false
         _ = self.fplPlayersModel.refresh(complete: {
             self.players = self.fplPlayersModel.players
-            self.activityIndicator.stopAnimating()
+            self.activityIndicatorContainer.isHidden = true
             self.sortAscending()
+            self.tableView.reloadData()
             self.tableView.isHidden = false
-            self.navigationController?.setToolbarHidden(false, animated: true)
+            self.setupToolbar(lastUpdatedTitle: self.fplPlayersModel.timeSinceLastRefresh())
+//            self.navigationController?.setToolbarHidden(false, animated: true)
+//            self.navigationController?.isNavigationBarHidden = false
         })
     }
 
@@ -189,10 +241,12 @@ class FPLPlayersTableViewController: UITableViewController {
             
             cell.playerNameLabel.text = player.name
             cell.teamNameLabel.text = player.team
-            cell.priceLabel.text = String(format:"%.2f", player.price)
+//            cell.priceLabel.text = String(format:"%.2f", player.price)
+            cell.priceLabel.text = String(player.price_formatted)
             cell.netTransfersInLabel.text = String(player.netTransfersIn)
-            cell.targetPercentageLabel.text = String(player.targetPercentage)
-            
+//            cell.targetPercentageLabel.text = String(player.targetPercentage)
+            cell.targetPercentageLabel.text = String(player.targetPercentageFormatted)
+        
             if (player.targetPercentage > 100) {
                 cell.targetPercentageLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
 //                # https://www.ralfebert.de/snippets/ios/swift-uicolor-picker/
@@ -213,11 +267,11 @@ class FPLPlayersTableViewController: UITableViewController {
     }
     
     private func loadSamplePlayers() {
-        let player1 = FPLPlayerModel(name: "Theo Walcott", team: "Arsenal", price: 8.7, netTransfersIn: 800000, targetPercentage: -78)!
-        let player2 = FPLPlayerModel(name: "Alexis Sanchez", team: "Arsenal", price: 11.2, netTransfersIn: 25000, targetPercentage: 255)!
-        let player3 = FPLPlayerModel(name: "Deli Ali", team: "Spurs", price: 7.8, netTransfersIn: 350000, targetPercentage: 101)!
-        let player4 = FPLPlayerModel(name: "Daily Blind", team: "Man U", price: 5.5, netTransfersIn: -50000, targetPercentage: -50)!
-        let player5 = FPLPlayerModel(name: "Romeleu Lukaku", team: "Everton", price: 10.2, netTransfersIn: 20000, targetPercentage: 24)!
+        let player1 = FPLPlayerModel(name: "Walcott", team: "Arsenal", price: 8.7, price_formatted: "8.7m", netTransfersIn: 800000, targetPercentage: -78, targetPercentageFormatted: "-78%")!
+        let player2 = FPLPlayerModel(name: "Sanchez", team: "Arsenal", price: 11.2, price_formatted: "8.7m", netTransfersIn: 25000, targetPercentage: 255, targetPercentageFormatted: "-78%")!
+        let player3 = FPLPlayerModel(name: "Ali", team: "Spurs", price: 7.8, price_formatted: "8.7m", netTransfersIn: 350000, targetPercentage: 101, targetPercentageFormatted: "-78%")!
+        let player4 = FPLPlayerModel(name: "Blind", team: "Man U", price: 5.5, price_formatted: "8.7m", netTransfersIn: -50000, targetPercentage: -50, targetPercentageFormatted: "-78%")!
+        let player5 = FPLPlayerModel(name: "Lukaku", team: "Everton", price: 10.2, price_formatted: "8.7m", netTransfersIn: 20000, targetPercentage: 24, targetPercentageFormatted: "-78%")!
         
         players += [player1, player2, player3, player4, player5]
     }

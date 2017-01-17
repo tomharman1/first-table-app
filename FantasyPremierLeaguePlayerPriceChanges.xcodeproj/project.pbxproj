@@ -14,12 +14,14 @@
 		F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
 		F832BDC81DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
 		F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */; };
+		F86E39D51E0C98C4002609CD /* CustomUIToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E39D41E0C98C4002609CD /* CustomUIToolbar.swift */; };
 		F87087941D8125C5007DCE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87087931D8125C5007DCE18 /* AppDelegate.swift */; };
 		F87087991D8125C5007DCE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87087971D8125C5007DCE18 /* Main.storyboard */; };
 		F870879B1D8125C5007DCE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F870879A1D8125C5007DCE18 /* Assets.xcassets */; };
 		F870879E1D8125C5007DCE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F870879C1D8125C5007DCE18 /* LaunchScreen.storyboard */; };
 		F87087A91D8125C5007DCE18 /* FirstTableAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87087A81D8125C5007DCE18 /* FirstTableAppTests.swift */; };
 		F8AB3B451DBD67820055AB81 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AB3B441DBD67820055AB81 /* Alamofire.framework */; };
+		F8AE1E071E15690900680693 /* TitleUIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE1E061E15690900680693 /* TitleUIBarButtonItem.swift */; };
 		F8CEA7F91DCFE07F0091BCB4 /* FPLPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA7F81DCFE07F0091BCB4 /* FPLPlayerService.swift */; };
 		F8CEA7FB1DCFE4A10091BCB4 /* FPLPlayersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,7 @@
 		F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersTableViewController.swift; sourceTree = "<group>"; };
 		F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerModel.swift; sourceTree = "<group>"; };
 		F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		F86E39D41E0C98C4002609CD /* CustomUIToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIToolbar.swift; sourceTree = "<group>"; };
 		F87087901D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyPremierLeaguePlayerPriceChanges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87087931D8125C5007DCE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F87087981D8125C5007DCE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		F87087A81D8125C5007DCE18 /* FirstTableAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableAppTests.swift; sourceTree = "<group>"; };
 		F87087AA1D8125C5007DCE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8AB3B441DBD67820055AB81 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Release-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		F8AE1E061E15690900680693 /* TitleUIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleUIBarButtonItem.swift; sourceTree = "<group>"; };
 		F8CEA7F81DCFE07F0091BCB4 /* FPLPlayerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerService.swift; sourceTree = "<group>"; };
 		F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersModel.swift; sourceTree = "<group>"; };
 		FB6773B83FAB53FE285BB2CD /* Pods_FirstTableApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstTableApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,7 @@
 		F87087871D8125C5007DCE18 = {
 			isa = PBXGroup;
 			children = (
+				F8AE1E061E15690900680693 /* TitleUIBarButtonItem.swift */,
 				F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */,
 				F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */,
 				F87087921D8125C5007DCE18 /* FirstTableApp */,
@@ -135,6 +140,7 @@
 				F870879F1D8125C5007DCE18 /* Info.plist */,
 				F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */,
 				F8CEA7F81DCFE07F0091BCB4 /* FPLPlayerService.swift */,
+				F86E39D41E0C98C4002609CD /* CustomUIToolbar.swift */,
 			);
 			path = FirstTableApp;
 			sourceTree = "<group>";
@@ -355,7 +361,9 @@
 				F87087941D8125C5007DCE18 /* AppDelegate.swift in Sources */,
 				F80004D61DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift in Sources */,
 				F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */,
+				F8AE1E071E15690900680693 /* TitleUIBarButtonItem.swift in Sources */,
 				F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */,
+				F86E39D51E0C98C4002609CD /* CustomUIToolbar.swift in Sources */,
 				F8CEA7FB1DCFE4A10091BCB4 /* FPLPlayersModel.swift in Sources */,
 				F832BDC31DB729BE006027FB /* FPLPlayersTableViewController.swift in Sources */,
 				F8CEA7F91DCFE07F0091BCB4 /* FPLPlayerService.swift in Sources */,
