@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CBF8457EE9F5DDFE8AFF9DB /* Pods_FantasyPremierLeaguePlayerPriceChanges.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AA6ACDDD8FD5DFFA008375 /* Pods_FantasyPremierLeaguePlayerPriceChanges.framework */; };
+		97B2A4BF2215BED86339E54B /* Pods_FantasyPremierLeaguePlayerPriceChangesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135B430A15EF4C79C7AE3CB0 /* Pods_FantasyPremierLeaguePlayerPriceChangesTests.framework */; };
 		B5F62AAF334113C6E81AB0A2 /* Pods_FirstTableApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6773B83FAB53FE285BB2CD /* Pods_FirstTableApp.framework */; };
 		D2A6197ABC6104A4615C3078 /* Pods_FirstTableAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04E7253A751CBFF9A083FD3 /* Pods_FirstTableAppTests.framework */; };
 		F80004D61DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */; };
@@ -37,10 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		135B430A15EF4C79C7AE3CB0 /* Pods_FantasyPremierLeaguePlayerPriceChangesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FantasyPremierLeaguePlayerPriceChangesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1753B89DFB9ED27CB190F20B /* Pods-FantasyPremierLeaguePlayerPriceChanges.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FantasyPremierLeaguePlayerPriceChanges.release.xcconfig"; path = "Pods/Target Support Files/Pods-FantasyPremierLeaguePlayerPriceChanges/Pods-FantasyPremierLeaguePlayerPriceChanges.release.xcconfig"; sourceTree = "<group>"; };
+		49AA6ACDDD8FD5DFFA008375 /* Pods_FantasyPremierLeaguePlayerPriceChanges.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FantasyPremierLeaguePlayerPriceChanges.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50541DB65F4B8D703E3F7932 /* Pods-FantasyPremierLeaguePlayerPriceChanges.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FantasyPremierLeaguePlayerPriceChanges.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FantasyPremierLeaguePlayerPriceChanges/Pods-FantasyPremierLeaguePlayerPriceChanges.debug.xcconfig"; sourceTree = "<group>"; };
 		744B57C28A4096E686DD6D6D /* Pods-FirstTableAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableAppTests/Pods-FirstTableAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D78EB9D9F85431DDB52042B /* Pods-FirstTableApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D68B92524F86143427005DC4 /* Pods-FantasyPremierLeaguePlayerPriceChangesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FantasyPremierLeaguePlayerPriceChangesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FantasyPremierLeaguePlayerPriceChangesTests/Pods-FantasyPremierLeaguePlayerPriceChangesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E04E7253A751CBFF9A083FD3 /* Pods_FirstTableAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstTableAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29F430BB65C01668F304781 /* Pods-FirstTableAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTableAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTableAppTests/Pods-FirstTableAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		F5CD50E1887C30FE18D971BD /* Pods-FantasyPremierLeaguePlayerPriceChangesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FantasyPremierLeaguePlayerPriceChangesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FantasyPremierLeaguePlayerPriceChangesTests/Pods-FantasyPremierLeaguePlayerPriceChangesTests.release.xcconfig"; sourceTree = "<group>"; };
 		F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersTableViewController.swift; sourceTree = "<group>"; };
 		F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerModel.swift; sourceTree = "<group>"; };
@@ -70,6 +78,7 @@
 			files = (
 				B5F62AAF334113C6E81AB0A2 /* Pods_FirstTableApp.framework in Frameworks */,
 				F8AB3B451DBD67820055AB81 /* Alamofire.framework in Frameworks */,
+				0CBF8457EE9F5DDFE8AFF9DB /* Pods_FantasyPremierLeaguePlayerPriceChanges.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2A6197ABC6104A4615C3078 /* Pods_FirstTableAppTests.framework in Frameworks */,
+				97B2A4BF2215BED86339E54B /* Pods_FantasyPremierLeaguePlayerPriceChangesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +100,8 @@
 				F8AB3B441DBD67820055AB81 /* Alamofire.framework */,
 				FB6773B83FAB53FE285BB2CD /* Pods_FirstTableApp.framework */,
 				E04E7253A751CBFF9A083FD3 /* Pods_FirstTableAppTests.framework */,
+				49AA6ACDDD8FD5DFFA008375 /* Pods_FantasyPremierLeaguePlayerPriceChanges.framework */,
+				135B430A15EF4C79C7AE3CB0 /* Pods_FantasyPremierLeaguePlayerPriceChangesTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,6 +113,10 @@
 				FBBD0F1FE8BA2066CFC5DE11 /* Pods-FirstTableApp.release.xcconfig */,
 				744B57C28A4096E686DD6D6D /* Pods-FirstTableAppTests.debug.xcconfig */,
 				E29F430BB65C01668F304781 /* Pods-FirstTableAppTests.release.xcconfig */,
+				50541DB65F4B8D703E3F7932 /* Pods-FantasyPremierLeaguePlayerPriceChanges.debug.xcconfig */,
+				1753B89DFB9ED27CB190F20B /* Pods-FantasyPremierLeaguePlayerPriceChanges.release.xcconfig */,
+				D68B92524F86143427005DC4 /* Pods-FantasyPremierLeaguePlayerPriceChangesTests.debug.xcconfig */,
+				F5CD50E1887C30FE18D971BD /* Pods-FantasyPremierLeaguePlayerPriceChangesTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -267,13 +283,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FantasyPremierLeaguePlayerPriceChanges/Pods-FantasyPremierLeaguePlayerPriceChanges-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FantasyPremierLeaguePlayerPriceChanges/Pods-FantasyPremierLeaguePlayerPriceChanges-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		36C0359A1ED2CD76E1D19C94 /* [CP] Embed Pods Frameworks */ = {
@@ -288,7 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstTableAppTests/Pods-FirstTableAppTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FantasyPremierLeaguePlayerPriceChangesTests/Pods-FantasyPremierLeaguePlayerPriceChangesTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		702F16851BDC08E9AC9ADAED /* [CP] Check Pods Manifest.lock */ = {
@@ -297,13 +316,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FantasyPremierLeaguePlayerPriceChangesTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9A93F3B1D13DCA1D2FC6CC29 /* [CP] Copy Pods Resources */ = {
@@ -318,7 +340,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstTableApp/Pods-FirstTableApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FantasyPremierLeaguePlayerPriceChanges/Pods-FantasyPremierLeaguePlayerPriceChanges-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C2329FF4282B5BE8AA5E5C1 /* [CP] Check Pods Manifest.lock */ = {
@@ -327,13 +349,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FantasyPremierLeaguePlayerPriceChanges-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EFBDDB742A3C06F1E18DA7BC /* [CP] Copy Pods Resources */ = {
@@ -348,7 +373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstTableAppTests/Pods-FirstTableAppTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FantasyPremierLeaguePlayerPriceChangesTests/Pods-FantasyPremierLeaguePlayerPriceChangesTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -501,9 +526,8 @@
 		};
 		F87087AE1D8125C5007DCE18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D78EB9D9F85431DDB52042B /* Pods-FirstTableApp.debug.xcconfig */;
+			baseConfigurationReference = 50541DB65F4B8D703E3F7932 /* Pods-FantasyPremierLeaguePlayerPriceChanges.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,9 +543,8 @@
 		};
 		F87087AF1D8125C5007DCE18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBBD0F1FE8BA2066CFC5DE11 /* Pods-FirstTableApp.release.xcconfig */;
+			baseConfigurationReference = 1753B89DFB9ED27CB190F20B /* Pods-FantasyPremierLeaguePlayerPriceChanges.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -537,7 +560,7 @@
 		};
 		F87087B11D8125C5007DCE18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 744B57C28A4096E686DD6D6D /* Pods-FirstTableAppTests.debug.xcconfig */;
+			baseConfigurationReference = D68B92524F86143427005DC4 /* Pods-FantasyPremierLeaguePlayerPriceChangesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FirstTableAppTests/Info.plist;
@@ -551,7 +574,7 @@
 		};
 		F87087B21D8125C5007DCE18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E29F430BB65C01668F304781 /* Pods-FirstTableAppTests.release.xcconfig */;
+			baseConfigurationReference = F5CD50E1887C30FE18D971BD /* Pods-FantasyPremierLeaguePlayerPriceChangesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FirstTableAppTests/Info.plist;
