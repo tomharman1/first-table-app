@@ -19,10 +19,6 @@ class FPLPlayersTableViewController: UITableViewController {
     var players = [FPLPlayerModel]()
     var activityIndicatorContainer: UIView
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         self.activityIndicatorContainer = UIView()
         super.init(coder: aDecoder)
