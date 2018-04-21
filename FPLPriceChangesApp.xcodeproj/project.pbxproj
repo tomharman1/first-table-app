@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1B5DF7208BED8B00470AD5 /* MainUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1B5DF6208BED8B00470AD5 /* MainUiViewController.swift */; };
 		CDE7D1EDE010140334605DB4 /* Pods_FPLPriceChangesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0457941C00C7BFDC020B7002 /* Pods_FPLPriceChangesApp.framework */; };
 		F2E96907A078B2B05F5284D2 /* Pods_FPLPriceChangesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6411D85553A6D459E65B2AB6 /* Pods_FPLPriceChangesAppTests.framework */; };
 		F80004D61DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */; };
-		F832BDC31DB729BE006027FB /* FPLPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */; };
 		F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
 		F832BDC81DB72BDC006027FB /* FPLPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */; };
 		F857D1E01DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */; };
@@ -38,15 +38,15 @@
 		0457941C00C7BFDC020B7002 /* Pods_FPLPriceChangesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPLPriceChangesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B7263A5EF17C935993A2199 /* Pods-FPLPriceChangesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPLPriceChangesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FPLPriceChangesApp/Pods-FPLPriceChangesApp.release.xcconfig"; sourceTree = "<group>"; };
 		396FC95B7269C31ADD61B2F0 /* Pods-FPLPriceChangesAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPLPriceChangesAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FPLPriceChangesAppTests/Pods-FPLPriceChangesAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E1B5DF6208BED8B00470AD5 /* MainUiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUiViewController.swift; sourceTree = "<group>"; };
 		6411D85553A6D459E65B2AB6 /* Pods_FPLPriceChangesAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPLPriceChangesAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E4C5B91AC94E565C8847AE /* Pods-FPLPriceChangesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPLPriceChangesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FPLPriceChangesApp/Pods-FPLPriceChangesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CCA65E93F561C56DC99DFF3F /* Pods-FPLPriceChangesAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPLPriceChangesAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FPLPriceChangesAppTests/Pods-FPLPriceChangesAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayersTableViewController.swift; sourceTree = "<group>"; };
 		F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerModel.swift; sourceTree = "<group>"; };
 		F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPLPlayerTableViewCell.swift; sourceTree = "<group>"; };
 		F86E39D41E0C98C4002609CD /* CustomUIToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIToolbar.swift; sourceTree = "<group>"; };
-		F87087901D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FantasyPremierLeaguePlayerPriceChanges.app; path = FPLPriceChangesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87087901D8125C5007DCE18 /* FPLPriceChangesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPLPriceChangesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87087931D8125C5007DCE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F87087981D8125C5007DCE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F870879A1D8125C5007DCE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +103,7 @@
 		F87087871D8125C5007DCE18 = {
 			isa = PBXGroup;
 			children = (
+				3E1B5DF6208BED8B00470AD5 /* MainUiViewController.swift */,
 				F8AE1E061E15690900680693 /* TitleUIBarButtonItem.swift */,
 				F80004D51DD783E60069AD62 /* FPLPlayerHeaderTableViewCell.swift */,
 				F832BDC61DB72BDC006027FB /* FPLPlayerModel.swift */,
@@ -116,7 +117,7 @@
 		F87087911D8125C5007DCE18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F87087901D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges.app */,
+				F87087901D8125C5007DCE18 /* FPLPriceChangesApp.app */,
 				F87087A41D8125C5007DCE18 /* FPLPriceChangesAppTests.xctest */,
 			);
 			name = Products;
@@ -127,7 +128,6 @@
 			children = (
 				F87087931D8125C5007DCE18 /* AppDelegate.swift */,
 				F87087971D8125C5007DCE18 /* Main.storyboard */,
-				F832BDC21DB729BE006027FB /* FPLPlayersTableViewController.swift */,
 				F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */,
 				F870879A1D8125C5007DCE18 /* Assets.xcassets */,
 				F870879C1D8125C5007DCE18 /* LaunchScreen.storyboard */,
@@ -159,7 +159,7 @@
 			);
 			name = FPLPriceChangesApp;
 			productName = FirstTableApp;
-			productReference = F87087901D8125C5007DCE18 /* FantasyPremierLeaguePlayerPriceChanges.app */;
+			productReference = F87087901D8125C5007DCE18 /* FPLPriceChangesApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F87087A31D8125C5007DCE18 /* FPLPriceChangesAppTests */ = {
@@ -359,8 +359,8 @@
 				F832BDC71DB72BDC006027FB /* FPLPlayerModel.swift in Sources */,
 				F86E39D51E0C98C4002609CD /* CustomUIToolbar.swift in Sources */,
 				F8CEA7FB1DCFE4A10091BCB4 /* FPLPlayersModel.swift in Sources */,
-				F832BDC31DB729BE006027FB /* FPLPlayersTableViewController.swift in Sources */,
 				F8CEA7F91DCFE07F0091BCB4 /* FPLPlayerService.swift in Sources */,
+				3E1B5DF7208BED8B00470AD5 /* MainUiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +514,7 @@
 					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
 				);
 				INFOPLIST_FILE = FPLPriceChangesApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tomharman.me.fantasy-prem-price-changes-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,6 +532,7 @@
 					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
 				);
 				INFOPLIST_FILE = FPLPriceChangesApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tomharman.me.fantasy-prem-price-changes-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
