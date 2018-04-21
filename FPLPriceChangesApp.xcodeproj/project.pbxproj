@@ -18,7 +18,6 @@
 		F87087941D8125C5007DCE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87087931D8125C5007DCE18 /* AppDelegate.swift */; };
 		F87087991D8125C5007DCE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87087971D8125C5007DCE18 /* Main.storyboard */; };
 		F870879B1D8125C5007DCE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F870879A1D8125C5007DCE18 /* Assets.xcassets */; };
-		F870879E1D8125C5007DCE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F870879C1D8125C5007DCE18 /* LaunchScreen.storyboard */; };
 		F8AE1E071E15690900680693 /* TitleUIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE1E061E15690900680693 /* TitleUIBarButtonItem.swift */; };
 		F8CEA7F91DCFE07F0091BCB4 /* FPLPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA7F81DCFE07F0091BCB4 /* FPLPlayerService.swift */; };
 		F8CEA7FB1DCFE4A10091BCB4 /* FPLPlayersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */; };
@@ -50,7 +49,6 @@
 		F87087931D8125C5007DCE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F87087981D8125C5007DCE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F870879A1D8125C5007DCE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F870879D1D8125C5007DCE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F870879F1D8125C5007DCE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F87087A41D8125C5007DCE18 /* FPLPriceChangesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPLPriceChangesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AB3B441DBD67820055AB81 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Release-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				F87087971D8125C5007DCE18 /* Main.storyboard */,
 				F8CEA7FA1DCFE4A10091BCB4 /* FPLPlayersModel.swift */,
 				F870879A1D8125C5007DCE18 /* Assets.xcassets */,
-				F870879C1D8125C5007DCE18 /* LaunchScreen.storyboard */,
 				F870879F1D8125C5007DCE18 /* Info.plist */,
 				F857D1DF1DB4118D00A1CBC5 /* FPLPlayerTableViewCell.swift */,
 				F8CEA7F81DCFE07F0091BCB4 /* FPLPlayerService.swift */,
@@ -190,7 +187,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Toms Apps";
 				TargetAttributes = {
 					F870878F1D8125C5007DCE18 = {
@@ -230,7 +227,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F870879E1D8125C5007DCE18 /* LaunchScreen.storyboard in Resources */,
 				F870879B1D8125C5007DCE18 /* Assets.xcassets in Resources */,
 				F87087991D8125C5007DCE18 /* Main.storyboard in Resources */,
 			);
@@ -391,14 +387,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F870879C1D8125C5007DCE18 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F870879D1D8125C5007DCE18 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -415,12 +403,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -469,12 +459,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

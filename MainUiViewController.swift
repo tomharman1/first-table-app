@@ -226,7 +226,7 @@ class MainUiViewController: UIViewController, UITableViewDataSource {
         let player4 = FPLPlayerModel(name: "Blind", team: "Man U", price: 5.5, price_formatted: "8.7m", netTransfersIn: -50000, targetPercentage: -50, targetPercentageFormatted: "-78%")
         let player5 = FPLPlayerModel(name: "Lukaku", team: "Everton", price: 10.2, price_formatted: "8.7m", netTransfersIn: 20000, targetPercentage: 24, targetPercentageFormatted: "-78%")
         
-        players += [player1, player2, player3, player4, player5]
+        players += [player1!, player2!, player3!, player4!, player5!]
     }
     
 
